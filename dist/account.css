@@ -1,0 +1,138 @@
+/* Аккаунт: кіру/тіркелу беті, профиль мәзірі, баптаулар беті */
+
+/* ---------- Жүктелу ---------- */
+.boot-screen{min-height:100vh;display:grid;place-content:center;justify-items:center;gap:14px;color:#8b85a7;font-size:13px}
+.boot-screen img{animation:bootFloat 1.6s ease-in-out infinite}
+@keyframes bootFloat{50%{transform:translateY(-8px)}}
+
+/* ---------- Кіру / тіркелу ---------- */
+.auth-page{min-height:100vh;display:grid;grid-template-columns:minmax(320px,44%) 1fr;background:var(--bg)}
+.auth-art{background:linear-gradient(160deg,#8a79f0 0%,#6a55d8 100%);color:white;padding:40px 48px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.auth-art:before,.auth-art:after{content:'';position:absolute;border:1px solid #ffffff2e;border-radius:50%}
+.auth-art:before{width:420px;height:420px;right:-160px;top:-120px}
+.auth-art:after{width:300px;height:300px;left:-120px;bottom:-90px}
+.auth-art .logo{color:white}.auth-art .logo b{color:#e4ddff}.auth-art .logo-mark{background:white;color:var(--purple)}
+.auth-art-body{margin:auto 0;position:relative;z-index:1}
+.auth-buddy{width:150px;height:170px;object-fit:cover;object-position:center 30%;display:block;margin-bottom:24px;border-radius:30px;border:4px solid #ffffff40;box-shadow:0 18px 34px #3d2a9a55;animation:bootFloat 3.2s ease-in-out infinite}
+.auth-art h2{font-size:30px;line-height:1.25;letter-spacing:-1px;margin:0 0 22px;max-width:360px}
+.auth-art ul{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.auth-art li{font-size:13px;font-weight:600;background:#ffffff1f;border:1px solid #ffffff2a;border-radius:12px;padding:12px 14px;max-width:340px}
+.auth-art small{position:relative;z-index:1;opacity:.75;font-size:11px}
+.auth-main{display:flex;flex-direction:column;padding:28px 40px}
+.auth-top{display:flex;justify-content:flex-end;align-items:center}
+.auth-mobile-logo{display:none;margin-right:auto}
+.auth-card{width:100%;max-width:420px;margin:auto;background:white;border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:0 20px 50px #5b4bb514}
+.auth-tabs{display:grid;grid-template-columns:1fr 1fr;background:#f3f1fb;border-radius:12px;padding:4px;margin-bottom:26px}
+.auth-tabs button{border:0;background:none;border-radius:9px;padding:10px;font-weight:700;font-size:12px;color:#8b85a7}
+.auth-tabs button.active{background:white;color:var(--purple);box-shadow:0 2px 8px #7764e81f}
+.auth-card h1{font-size:24px;margin:0 0 6px}
+.auth-sub{color:var(--muted);font-size:12px;line-height:1.7;margin:0 0 22px}
+.auth-card form label,.settings-form label{display:block;font-size:11px;font-weight:700;color:#6f6987;margin:0 0 14px;letter-spacing:0}
+.auth-card input,.settings-form input,#deleteForm input{display:block;width:100%;margin-top:7px;padding:12px 13px;border:1px solid #e4e0ef;border-radius:10px;background:#fbfaff;color:var(--ink);font-size:13px;font-weight:500;transition:border-color .15s,box-shadow .15s}
+.auth-card input:focus,.settings-form input:focus,#deleteForm input:focus{outline:none;border-color:#a99bf3;box-shadow:0 0 0 3px #7764e81f;background:white}
+.pw-wrap{position:relative;display:block}
+.pw-wrap input{padding-right:84px}
+.pw-toggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);margin-top:3px;border:0;background:#f0edfb;color:var(--purple);font-size:10px;font-weight:700;border-radius:7px;padding:6px 9px}
+.auth-error{background:#fdf0f0;color:#b5535b;border:1px solid #f4d6d8;border-radius:10px;padding:10px 12px;font-size:12px;margin:4px 0 14px}
+.auth-submit{width:100%;padding:14px;font-size:13px;margin-top:4px}
+.auth-submit:disabled{opacity:.6;cursor:wait}
+.auth-switch{text-align:center;color:var(--muted);font-size:12px;margin:20px 0 0}
+.auth-switch button{border:0;background:none;color:var(--purple);font-weight:700;padding:0 0 0 4px}
+
+/* ---------- Профиль мәзірі ---------- */
+.avatar-btn{width:35px;height:35px;border-radius:50%;border:2px solid #ffffff;background:linear-gradient(150deg,#a597fa,#7560de);color:white;font-weight:800;font-size:11px;box-shadow:0 0 0 1px #e1dbf5,0 4px 10px #7764e830}
+.profile-btn{width:100%;border:0;border-top:1px solid var(--line);background:none;text-align:left;border-radius:0;padding:14px 6px 4px;display:flex;align-items:center;gap:10px}
+.profile-btn:hover,.profile-btn.active{background:#f7f5fe;border-radius:12px}
+.profile-btn strong{font-size:11px;display:block;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.profile-btn small{max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.profile-more{margin-left:auto;color:#aaa3c0;font-size:16px}
+.account-menu{position:fixed;z-index:40;min-width:230px;max-width:calc(100vw - 24px);background:white;border:1px solid #ebe7f6;border-radius:14px;padding:6px;box-shadow:0 18px 40px #2a1f5c26;animation:menuIn .12s ease-out}
+@keyframes menuIn{from{opacity:0;transform:translateY(-4px)}}
+.account-menu-head{display:flex;gap:10px;align-items:center;padding:10px 10px 12px;border-bottom:1px solid var(--line);margin-bottom:4px}
+.account-menu-head strong{display:block;font-size:12px}
+.account-menu-head small{display:block;color:var(--muted);font-size:10px;margin-top:3px;word-break:break-all}
+.account-menu button{width:100%;border:0;background:none;text-align:left;padding:11px 10px;border-radius:9px;font-size:12px;font-weight:600;display:flex;gap:10px;align-items:center;color:#4b475d}
+.account-menu button span{width:16px;text-align:center;color:#9b91bd}
+.account-menu button:hover,.account-menu button:focus-visible{background:#f4f1fd}
+.account-menu .danger-item,.account-menu .danger-item span{color:#c0545d}
+
+/* ---------- Баптаулар ---------- */
+.settings-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
+.settings-card{margin:0}
+.settings-card h2{font-size:15px;margin:0 0 6px}
+.settings-gap{margin-top:26px!important}
+.settings-sub{color:var(--muted);font-size:11px;line-height:1.75;margin:0 0 16px}
+.profile-card{grid-column:1/-1}
+.settings-card.tall{grid-row:span 2}
+.profile-hero{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.profile-hero h2{font-size:20px;margin:0 0 4px}
+.profile-hero small{color:var(--muted);font-size:11px}
+.avatar.big{width:62px;height:62px;font-size:20px;background:linear-gradient(150deg,#a597fa,#7560de);color:white;flex-shrink:0}
+.settings-form .form-grid{margin:0}
+.settings-row.static{cursor:default}
+.segmented{display:flex;background:#f3f1fb;border-radius:10px;padding:3px}
+.segmented button{border:0;background:none;padding:7px 12px;border-radius:8px;font-size:11px;font-weight:700;color:#8b85a7}
+.segmented button.active{background:white;color:var(--purple);box-shadow:0 2px 6px #7764e81c}
+.switch{position:relative;width:40px;height:23px;flex-shrink:0}
+.settings-row .switch input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:pointer;z-index:1}
+.switch i{position:absolute;inset:0;background:#e2deee;border-radius:20px;transition:background .2s}
+.switch i:after{content:'';position:absolute;width:17px;height:17px;left:3px;top:3px;background:white;border-radius:50%;box-shadow:0 1px 3px #0002;transition:transform .2s}
+.switch input:checked+i{background:var(--purple)}
+.switch input:checked+i:after{transform:translateX(17px)}
+.switch input:focus-visible+i{outline:3px solid #b8adff;outline-offset:2px}
+.ghost-btn{border:1px solid #e3def2;background:white;color:#5d5675;border-radius:10px;padding:11px 15px;font-weight:700;font-size:11px}
+.ghost-btn:hover{background:#f7f5fe}
+.danger-zone{margin-top:26px;border:1px solid #f3d9dc;background:#fffafa;border-radius:14px;padding:16px}
+.danger-zone h3{margin:0 0 6px;font-size:13px;color:#b5535b}
+.danger-zone p{margin:0 0 14px;font-size:11px;line-height:1.7;color:#a7858a}
+.danger-btn{border:0;background:#cf5f68;color:white;border-radius:10px;padding:11px 15px;font-weight:700;font-size:11px}
+.form-msg{font-size:12px;border-radius:9px;padding:9px 12px;margin:0 0 14px}
+.form-msg.err{background:#fdf0f0;color:#b5535b}
+.form-msg.ok{background:#eef8f1;color:#4f8a63}
+.modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:6px}
+#deleteForm label{display:block;font-size:11px;font-weight:700;color:#6f6987}
+
+/* ---------- Бейімделу ---------- */
+@media(max-width:950px){
+ .auth-page{grid-template-columns:1fr}
+ .auth-art{display:none}
+ .auth-mobile-logo{display:flex}
+ .auth-main{padding:20px 16px;min-height:100vh}
+ .settings-layout{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+ .auth-card{padding:24px 20px;border-radius:18px}
+ .avatar-btn{width:31px;height:31px;font-size:10px}
+ .profile-hero h2{font-size:17px}
+ .settings-row{gap:14px}
+}
+
+/* Профиль: лақап ат, оқу орны, курс */
+.nick-chip{display:inline-block;vertical-align:middle;margin-left:6px;background:#f0edff;color:var(--purple);font-size:11px;font-weight:800;border-radius:20px;padding:3px 9px;letter-spacing:0}
+.account-menu-head .nick-chip{font-size:9px;padding:2px 7px;margin-left:4px}
+.profile-hero-text{min-width:0}
+.profile-hero h2{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.study-line{margin:2px 0 5px;font-size:12px;color:#5d5675;font-weight:600;line-height:1.5}
+.form-section{font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#a597b3;margin:22px 0 12px;display:flex;align-items:center;gap:10px}
+.form-section:after{content:'';flex:1;height:1px;background:var(--line)}
+.profile-form .form-section:first-child{margin-top:6px}
+.field-hint{display:block;font-size:10px;font-weight:500;color:#a39cb5;margin-top:6px;line-height:1.5}
+.buddy-preview{display:flex;align-items:flex-end;gap:10px;margin:2px 0 6px;padding:12px 14px;border-radius:16px;background:linear-gradient(135deg,#f6f3ff,#fbfaff);border:1px solid #ebe6fb}
+.buddy-preview img{width:34px;height:auto;flex-shrink:0}
+.buddy-preview span{display:block;font-size:9px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#a597b3;margin-bottom:5px}
+.buddy-preview p{margin:0;background:white;border:1px solid #ebe6fb;border-radius:14px 14px 14px 4px;padding:9px 12px;font-size:12px;color:#3b3046;line-height:1.5;box-shadow:0 3px 10px #7764e812}
+.course-field{border:0;margin:0 0 16px;padding:0;min-width:0}
+.course-field legend{font-size:11px;font-weight:700;color:#6f6987;margin-bottom:8px;padding:0}
+.course-chips{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.course-chip{position:relative;margin:0!important}
+.course-chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.course-chip span{display:grid;place-items:center;min-width:38px;height:36px;padding:0 10px;border-radius:11px;border:1px solid #e4e0ef;background:#fbfaff;color:#6f6987;font-size:12px;font-weight:800;transition:all .15s}
+.course-chip:hover span{border-color:#c9bff7;color:var(--purple)}
+.course-chip input:checked+span{background:linear-gradient(150deg,#8f80f0,#7060df);border-color:transparent;color:white;box-shadow:0 4px 12px #7764e840}
+.course-chip input:focus-visible+span{outline:3px solid #b8adff;outline-offset:2px}
+.course-chip.master input:checked+span{background:linear-gradient(150deg,#5fa4e8,#4a7fd6);box-shadow:0 4px 12px #4a7fd640}
+.course-chip.phd input:checked+span{background:linear-gradient(150deg,#e0a24a,#c97d2a);box-shadow:0 4px 12px #c97d2a40}
+.course-sep{width:1px;height:22px;background:#e4e0ef;margin:0 4px}
+.course-name{display:block;margin-top:8px;font-size:11px;color:#8b85a7;font-weight:600}
+.settings-form input[list]::-webkit-calendar-picker-indicator{opacity:.5}
+@media (max-width:560px){.course-chip span{min-width:34px;height:34px;padding:0 8px}}

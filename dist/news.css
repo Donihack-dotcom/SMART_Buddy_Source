@@ -1,0 +1,106 @@
+/* «Жаңалықтар» бөлімі */
+.nav button{position:relative}
+.nav .ico svg{display:block}
+.nav-badge{margin-left:auto;background:#e5484d;color:#fff;font-size:9px;font-weight:800;border-radius:10px;padding:2px 6px;min-width:18px;text-align:center;box-shadow:0 2px 6px #e5484d55}
+
+.n-cat{display:inline-flex;align-items:center;gap:5px;border-radius:20px;padding:4px 10px;font-size:11px;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 11%,#fff)}
+.n-tags{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.n-pin{font-size:11px;font-weight:700;color:#d6454d}
+.n-new{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.03em;color:#fff;background:linear-gradient(135deg,#ff6b7a,#e5484d);border-radius:20px;padding:3px 8px;box-shadow:0 3px 8px #e5484d40;vertical-align:middle}
+.n-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:#9a95aa}
+.n-note{background:#fff8e8;border:1px solid #f6e3b4;color:#9b7a2b;border-radius:12px;padding:10px 14px;font-size:12px;margin:0 0 16px}
+
+.n-cover{position:relative;background:var(--g);display:grid;place-items:center;aspect-ratio:16/9;overflow:hidden}
+.n-cover span{font-size:40px;filter:drop-shadow(0 6px 14px #0003)}
+.n-cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.n-cover:after{content:'';position:absolute;inset:0;background:radial-gradient(120% 80% at 100% 0,#ffffff26,transparent 60%);pointer-events:none}
+
+/* Сүзгі */
+.n-filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:18px;scrollbar-width:none}
+.n-filters::-webkit-scrollbar{display:none}
+.n-filters button{flex-shrink:0;display:inline-flex;align-items:center;gap:7px;border:1px solid #e9e4f3;background:#fff;border-radius:20px;padding:8px 14px;font-size:12px;font-weight:700;color:#77738a;transition:all .15s}
+.n-filters button b{font-size:10px;background:#f3f0fb;color:#8b85a7;border-radius:10px;padding:1px 7px}
+.n-filters button:hover{border-color:#cfc6f6;color:var(--purple)}
+.n-filters button.active{background:var(--purple);border-color:var(--purple);color:#fff;box-shadow:0 6px 16px #7764e840}
+.n-filters button.active b{background:#ffffff33;color:#fff}
+
+/* Бекітілген (үлкен) карточка */
+.n-featured{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);background:#fff;border:1px solid #ece9f4;border-radius:24px;overflow:hidden;margin-bottom:20px;box-shadow:0 14px 40px #2a1f5a0f;transition:box-shadow .2s,transform .2s;width:100%}
+.n-featured:hover{transform:translateY(-2px);box-shadow:0 20px 50px #2a1f5a1c}
+.n-featured:hover img{transform:scale(1.03)}
+.n-featured:focus-visible{outline:3px solid #b8adff;outline-offset:3px}
+.n-cover.big{aspect-ratio:auto;min-height:280px;height:100%}
+.n-cover.big span{font-size:64px}
+.n-featured-body{padding:28px 30px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.n-featured-body h2{font-size:24px;line-height:1.25;margin:0;letter-spacing:-.015em;color:var(--ink)}
+.n-featured-body p{margin:0;color:#6f6987;font-size:14px;line-height:1.65;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.n-read{align-self:flex-start;margin-top:4px;font-weight:800;font-size:13px;color:var(--purple);background:#f3f0ff;border-radius:12px;padding:9px 14px;transition:background .15s}
+.n-featured:hover .n-read{background:#e8e3ff}
+
+/* Тор */
+.n-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.n-card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:#fff;border:1px solid #ece9f4;border-radius:20px;overflow:hidden;transition:box-shadow .2s,transform .2s;box-shadow:0 6px 20px #2a1f5a08}
+.n-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px #2a1f5a17}
+.n-card:hover img{transform:scale(1.04)}
+.n-card:focus-visible{outline:3px solid #b8adff;outline-offset:3px}
+.n-card-body{padding:15px 17px 17px;display:flex;flex-direction:column;gap:8px;flex:1}
+.n-card h3{margin:2px 0 0;font-size:15px;line-height:1.35;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.n-card p{margin:0;font-size:12px;line-height:1.6;color:#77738a;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.n-card .n-meta{margin-top:auto;padding-top:4px}
+
+/* Басты беттегі блок */
+.n-home{margin:4px 0 26px}
+.n-home .section-title h2{display:flex;align-items:center;gap:8px}
+.n-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.n-strip .n-cover{aspect-ratio:2/1}
+
+/* Мақала */
+.n-back{border:0;background:none;color:#8b85a7;font-weight:700;font-size:13px;padding:6px 0;margin:0 0 14px}
+.n-back:hover{color:var(--purple)}
+.n-article{background:#fff;border:1px solid #ece9f4;border-radius:26px;overflow:hidden;max-width:820px;margin:0 auto 30px;box-shadow:0 14px 40px #2a1f5a0d}
+.n-cover.hero{aspect-ratio:2.2/1}
+.n-cover.hero span{font-size:70px}
+.n-article-inner{padding:28px 40px 38px}
+.n-article h1{font-size:30px;line-height:1.2;letter-spacing:-.02em;margin:14px 0 12px}
+.n-author{display:inline-flex;align-items:center;gap:7px;font-weight:700;color:#5d5675}
+.n-author i{font-style:normal;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(150deg,#a597fa,#7560de);color:#fff;font-size:11px}
+.n-lead{font-size:16px;line-height:1.65;color:#4b4462;font-weight:500;margin:20px 0 6px;padding-bottom:18px;border-bottom:1px solid #f0edf6}
+.n-prose{font-size:15px;line-height:1.8;color:#2f2a40;margin-top:18px}
+.n-prose h3{font-size:18px;margin:26px 0 8px;letter-spacing:-.01em}
+.n-prose p{margin:0 0 14px}
+.n-prose ul,.n-prose ol{margin:0 0 14px;padding-left:22px}.n-prose li{margin:5px 0}
+.n-prose blockquote{margin:0 0 14px;padding:12px 16px;border-left:4px solid var(--purple);background:#f6f3ff;border-radius:0 14px 14px 0;color:#4b4462}
+.n-prose a{color:var(--purple);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.n-loading{color:#a39cb5;animation:nPulse 1.2s ease-in-out infinite}
+.n-related{max-width:820px;margin:8px auto 14px;font-size:18px}
+.n-article+.n-related+.n-grid{max-width:820px;margin:0 auto}
+
+/* Бос, жүктелу */
+.n-empty{text-align:center;padding:46px 20px}
+.n-empty div{font-size:42px;margin-bottom:8px}
+.n-empty p{color:#8b85a7;max-width:420px;margin:0 auto 16px;line-height:1.6}
+.n-skeleton{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.n-skeleton div{height:260px;border-radius:20px;background:linear-gradient(90deg,#f1eef8 25%,#f8f6fc 50%,#f1eef8 75%);background-size:200% 100%;animation:nShimmer 1.3s infinite}
+.n-skeleton.one{grid-template-columns:1fr;max-width:820px;margin:0 auto}.n-skeleton.one div{height:420px}
+@keyframes nShimmer{to{background-position:-200% 0}}
+@keyframes nPulse{50%{opacity:.5}}
+
+@media (max-width:1100px){.n-grid,.n-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.n-strip .n-card:nth-child(3){display:none}}
+@media (max-width:760px){
+ .n-featured{grid-template-columns:1fr}
+ .n-cover.big{min-height:0;aspect-ratio:16/9}
+ .n-featured-body{padding:18px 18px 20px}
+ .n-featured-body h2{font-size:19px}
+ .n-grid{grid-template-columns:1fr}
+ .n-strip{grid-template-columns:repeat(3,78%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none}
+ .n-strip::-webkit-scrollbar{display:none}
+ .n-strip .n-card{scroll-snap-align:start}
+ .n-strip .n-card:nth-child(3){display:flex}
+ .n-skeleton{grid-template-columns:1fr}
+ .n-article{border-radius:20px}
+ .n-article-inner{padding:20px 18px 26px}
+ .n-article h1{font-size:23px}
+ .n-prose{font-size:15px}
+ .nav-badge{position:absolute;top:2px;right:6px;margin:0;font-size:8px;padding:1px 5px;min-width:15px}
+}
+@media (prefers-reduced-motion:reduce){.n-card,.n-featured,.n-cover img{transition:none}.n-skeleton div{animation:none}}

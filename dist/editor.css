@@ -1,0 +1,141 @@
+/* Кесте редакторы, скриншоттан импорт, чаттағы сурет пен дедлайн карточкасы */
+
+/* ---------- Кесте беті ---------- */
+.intro .ghost-btn{flex-shrink:0}
+.sched-info{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.sched-info h3{margin:6px 0 6px;font-size:14px}
+.sched-info .muted{margin:0;font-size:11px}
+.sched-info.demo{background:linear-gradient(120deg,#f4f1ff,#fff);border-color:#e4ddfb}
+.sched-info .toggle{display:flex;gap:8px;align-items:center;font-size:11px;color:#8b85a7;margin-top:8px}
+.source-note .text-btn{font-size:inherit;padding:0 0 0 4px}
+
+/* ---------- Бастау картасы ---------- */
+.start-card{text-align:center;padding:38px 30px}
+.start-buddy{width:96px;height:110px;object-fit:cover;object-position:center 30%;border-radius:24px;margin-bottom:10px}
+.start-card h2{margin:6px 0 6px;font-size:22px}
+.start-options{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px;text-align:left}
+.start-option{border:1px solid #e7e2f5;background:#fbfaff;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:6px;transition:transform .15s,box-shadow .15s,border-color .15s}
+.start-option:hover{transform:translateY(-2px);box-shadow:0 10px 24px #7764e81a;border-color:#cfc5f7;filter:none}
+.so-ico{width:38px;height:38px;border-radius:12px;background:#eeebff;color:var(--purple);display:grid;place-items:center;font-size:18px;margin-bottom:6px}
+.start-option strong{font-size:13px}
+.start-option small{font-size:11px;color:var(--muted);line-height:1.6}
+
+/* ---------- Редактор ---------- */
+.editor-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.editor-subjects h2{font-size:15px;margin:0;display:flex;align-items:center;gap:8px}
+.editor-subjects .section-title{margin-bottom:14px}
+.subject-chips{display:flex;flex-wrap:wrap;gap:8px}
+.subject-chip{display:flex;align-items:center;gap:8px;border:1px solid #ebe7f5;background:white;border-radius:30px;padding:8px 12px 8px 10px;font-size:12px;font-weight:600;max-width:100%}
+.subject-chip i{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.subject-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:320px}
+.subject-chip small{background:#f3f1fb;color:#8b85a7;border-radius:10px;padding:1px 7px;font-size:10px}
+.subject-chip:hover{border-color:#cfc5f7}
+.editor-week{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:20px}
+.day-col{background:white;border:1px solid var(--line);border-radius:18px;padding:14px;display:flex;flex-direction:column;gap:9px;min-height:150px}
+.day-col-head{display:flex;justify-content:space-between;align-items:center;padding:2px 4px 6px}
+.day-col-head strong{font-size:13px}
+.day-col-head span{font-size:10px;color:var(--purple);background:#eeebff;border-radius:8px;padding:2px 7px}
+.day-col-head span:empty{display:none}
+.lesson-card{border:0;text-align:left;background:color-mix(in srgb,var(--c) 9%,white);border-left:4px solid var(--c);border-radius:11px;padding:10px 11px;display:flex;flex-direction:column;gap:3px;transition:transform .12s,box-shadow .12s}
+.lesson-card:hover{transform:translateY(-1px);box-shadow:0 6px 14px #2a1f5c14;filter:none}
+.lc-time{font-size:10px;font-weight:800;color:color-mix(in srgb,var(--c) 75%,#272838)}
+.lesson-card strong{font-size:12px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.lc-meta,.lc-place{font-size:10px;color:#7d7891;line-height:1.5}
+.lc-meta em{font-style:normal;font-weight:700}
+.day-empty{font-size:11px;color:#b5b0c5;margin:6px 4px}
+.add-here{margin-top:auto;border:1px dashed #d8d1f1;background:none;border-radius:10px;padding:9px;font-size:11px;font-weight:700;color:var(--purple)}
+.add-here:hover{background:#f7f5fe}
+.editor-footer{display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:end}
+.editor-footer h3{margin:0 0 4px;font-size:14px}
+.editor-footer .muted{margin:0;font-size:11px}
+.semester-form{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.semester-form label{font-size:10px;font-weight:700;color:#6f6987;letter-spacing:0;margin:0}
+.semester-form input{display:block;margin-top:5px;padding:9px 10px;border:1px solid #e4e0ef;border-radius:9px;font-size:12px;background:#fbfaff}
+.editor-danger{grid-column:1/-1;display:flex;gap:18px;border-top:1px solid var(--line);padding-top:12px}
+.editor-danger .text-btn{color:#b5535b}
+
+/* ---------- Терезелер (сабақ, пән, импорт) ---------- */
+.modal.modal-wide{max-width:600px}
+.editor-form label{display:block;font-size:11px;font-weight:700;color:#6f6987;letter-spacing:0;margin:0 0 4px}
+.editor-form input,.editor-form select{margin:7px 0 14px;font-size:13px;background:#fbfaff}
+.editor-form input:focus,.editor-form select:focus{outline:none;border-color:#a99bf3;box-shadow:0 0 0 3px #7764e81f;background:white}
+.ed-field{margin:0 0 16px}
+.field-label{display:block;font-size:11px;font-weight:700;color:#6f6987;margin-bottom:8px}
+.new-subject{background:#f8f6ff;border:1px dashed #d8d1f1;border-radius:12px;padding:12px 12px 2px;margin:-4px 0 16px}
+.day-picks{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day-picks button,.slot-chips button{border:1px solid #e5e0f2;background:white;border-radius:9px;padding:9px 0;font-size:11px;font-weight:700;color:#6f6987}
+.day-picks button.on,.slot-chips button.on{background:var(--purple);border-color:var(--purple);color:white}
+.slot-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.slot-chips button{padding:6px 9px;font-size:10px;font-weight:600}
+.form-grid.tight{margin:0;gap:12px}
+.form-grid.tight input{margin-bottom:6px}
+.segmented.wide{display:grid;grid-auto-flow:column;grid-auto-columns:1fr}
+.segmented.wide button{padding:9px 6px}
+.swatches{display:flex;flex-wrap:wrap;gap:8px}
+.swatch{position:relative;margin:0!important}
+.swatch input{position:absolute;opacity:0;width:100%;height:100%;margin:0!important;cursor:pointer}
+.swatch i{display:block;width:28px;height:28px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px white,0 0 0 3px transparent;transition:box-shadow .15s}
+.swatch input:checked+i{box-shadow:0 0 0 3px white,0 0 0 5px var(--c)}
+.swatch input:focus-visible+i{outline:3px solid #b8adff;outline-offset:3px}
+.form-msg.warn{background:#fff7e8;color:#a5772a}
+.danger-link{border:0;background:none;color:#c0545d;font-weight:700;font-size:11px;margin-right:auto;padding:0}
+.drop-zone{display:flex;flex-direction:column;align-items:center;gap:6px;border:2px dashed #d8d1f1;border-radius:16px;padding:30px;cursor:pointer;background:#fbfaff;text-align:center}
+.drop-zone.over,.drop-zone:hover{border-color:var(--purple);background:#f4f1ff}
+.dz-ico{font-size:26px;color:var(--purple)}
+.drop-zone strong{font-size:13px;color:var(--purple)}
+.drop-zone small{font-size:10px;color:var(--muted)}
+.import-preview{display:block;max-width:100%;max-height:180px;margin:12px auto;border-radius:12px;border:1px solid var(--line)}
+.reading{display:flex;align-items:center;gap:10px;justify-content:center;color:#8b85a7;font-size:12px}
+.spinner{width:16px;height:16px;border:2px solid #ddd6fa;border-top-color:var(--purple);border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.import-list{max-height:320px;overflow:auto;border:1px solid var(--line);border-radius:12px;margin-bottom:12px}
+.import-row{display:grid!important;grid-template-columns:auto 34px 82px 1fr;gap:10px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line);margin:0!important;cursor:pointer}
+.import-row:last-child{border-bottom:0}
+.import-row input{width:16px!important;height:16px;margin:0!important;accent-color:var(--purple)}
+.ir-day{font-size:11px;font-weight:800;color:var(--purple)}
+.ir-time{font-size:11px;font-weight:700;color:#4b475d}
+.ir-main strong{display:block;font-size:12px;color:var(--ink)}
+.ir-main small{font-size:10px;color:#8b85a7;font-weight:500}
+.replace-row{display:flex!important;align-items:center;gap:8px;font-size:11px;margin:0 0 12px!important}
+.replace-row input{width:16px!important;margin:0!important;accent-color:#cf5f68}
+
+/* ---------- Чат: сурет қосу және дедлайн ---------- */
+.attach-btn{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;cursor:pointer;font-size:16px;flex-shrink:0;color:#8b85a7;margin:0!important;letter-spacing:0}
+.attach-btn:hover{background:#f3f0fb}
+.attach-chip{position:relative;flex-shrink:0;display:block}
+.attach-chip img{display:block;width:36px;height:36px;object-fit:cover;border-radius:9px;border:1px solid #e4ddf7}
+.attach-chip button{position:absolute;top:-7px;right:-7px;width:18px!important;height:18px!important;min-width:0!important;padding:0!important;border-radius:50%!important;border:0;background:#4b475d!important;color:white;font-size:11px;line-height:18px;box-shadow:none!important}
+.chat-img{display:block;max-width:220px;max-height:220px;border-radius:12px;margin-top:8px;border:1px solid #ffffff80}
+.chat-task-actions{display:flex;gap:14px;margin-top:8px}
+.chat-task-actions .text-btn{padding:0;font-size:11px}
+
+/* ---------- Бейімделу ---------- */
+@media(max-width:950px){
+ .start-options{grid-template-columns:1fr}
+ .editor-footer{grid-template-columns:1fr}
+ .sched-info{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:650px){
+ .intro{flex-wrap:wrap;gap:12px}
+ .editor-actions{justify-content:flex-start}
+ .editor-week{grid-template-columns:1fr}
+ .day-picks{gap:4px}
+ .day-picks button{font-size:10px}
+ .import-row{grid-template-columns:auto 28px 70px 1fr;gap:6px}
+ .modal.modal-wide{padding:20px}
+}
+
+/* ---------- Импорт: ағынмен оқу, мәтінмен енгізу ---------- */
+.import-or{display:flex;align-items:center;gap:10px;color:#b1abc4;font-size:11px;margin:14px 0 10px}
+.import-or:before,.import-or:after{content:'';flex:1;height:1px;background:var(--line)}
+#importText{width:100%;resize:vertical;min-height:74px;border:1px solid #e4e0ef;border-radius:10px;padding:11px 12px;font:inherit;font-size:12px;background:#fbfaff;color:var(--ink)}
+#importText:focus{outline:none;border-color:#a99bf3;box-shadow:0 0 0 3px #7764e81f;background:white}
+.import-status{display:flex;align-items:center;gap:12px;background:#f8f6ff;border:1px solid #ebe6fb;border-radius:14px;padding:12px;margin-bottom:12px}
+.import-status img{width:54px;height:54px;object-fit:cover;border-radius:10px;border:1px solid var(--line);flex-shrink:0}
+.import-status div{flex:1;min-width:0}
+.import-status strong{display:flex;align-items:center;gap:8px;font-size:13px}
+.import-status small{display:block;color:#8b85a7;font-size:11px;margin-top:4px}
+.import-status small:empty{display:none}
+.import-row{animation:rowIn .25s ease-out}
+@keyframes rowIn{from{opacity:0;transform:translateY(4px)}}
+#importAdd:disabled{opacity:.5;cursor:not-allowed}
